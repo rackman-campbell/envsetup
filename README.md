@@ -9,9 +9,9 @@ Start by installing Docker using one of the scripts that correspond to your curr
 ### Prerequisites
 
 A system running:
-Ubuntu
-Fedora
-Centos
+Ubuntu,
+Fedora,
+Centos,
 and probably Debian
 
 
