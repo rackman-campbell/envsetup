@@ -17,7 +17,7 @@ and probably Debian
 
 ### Installing
 
-chmod +x ./ubuntu_docker_install.sh
+chmod +x ./ubuntu_docker_install.sh  
 ./ubuntu_docker_install.sh
 
 ## Contributing
