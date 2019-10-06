@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo yum remove docker \
+sudo yum -y remove docker \
                   docker-client \
                   docker-client-latest \
                   docker-common \
@@ -7,12 +7,12 @@ sudo yum remove docker \
                   docker-latest-logrotate \
                   docker-logrotate \
                   docker-engine
-sudo yum install -y yum-utils \
+sudo yum -y install yum-utils \
 device-mapper-persistent-data \
 lvm2
 sudo yum-config-manager \
     --add-repo \
     https://download.docker.com/linux/centos/docker-ce.repo
-sudo yum install docker-ce docker-ce-cli containerd.io
+sudo yum -y install docker-ce docker-ce-cli containerd.io
 sudo systemctl start docker
 sudo systemctl enable docker

@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo yum update
-sudo dnf remove docker \
+sudo dnf -y remove docker \
                docker-client \
                docker-client-latest \
                docker-common \
@@ -14,6 +14,6 @@ sudo dnf -y install dnf-plugins-core
 sudo dnf config-manager \
   --add-repo \
   https://download.docker.com/linux/fedora/docker-ce.repo
-sudo dnf install docker-ce docker-ce-cli containerd.io
+sudo dnf -y install docker-ce docker-ce-cli containerd.io
 sudo systemctl start docker
 sudo systemctl enable docker
