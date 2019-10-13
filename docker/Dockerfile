@@ -13,4 +13,7 @@ RUN curl -o aws-iam-authenticator https://amazon-eks.s3-us-west-2.amazonaws.com/
 RUN chmod +x ./aws-iam-authenticator
 RUN mkdir -p $HOME/bin && cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator && export PATH=$HOME/bin:$PATH
 RUN echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
-
+RUN curl --silent --location "https://github.com/weaveworks/eksctl/releases/download/latest_release/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+RUN mv /tmp/eksctl /usr/local/bin
+RUN curl -l https://s3.amazonaws.com/faws-toolbox.rax.io/v2.1.0/faws-linux.zip > ~/faws-darwin.zip
+RUN unzip -j ~/faws-darwin.zip faws -d /usr/local/bin/
