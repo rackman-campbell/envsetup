@@ -1,8 +1,8 @@
 FROM centos:centos8
-RUN yum -y update
-RUN yum -y install python36
+RUN yum -y install python36 \
+wget \
+unzip
 RUN pip3 install awscli --upgrade
-RUN yum -y install wget unzip
 RUN wget https://releases.hashicorp.com/terraform/0.12.10/terraform_0.12.10_linux_amd64.zip
 RUN unzip ./terraform_0.12.10_linux_amd64.zip
 RUN mv terraform /usr/local/bin/
