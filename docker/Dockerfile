@@ -13,6 +13,7 @@ RUN yum -y install python36 \
 wget \
 unzip \
 git \
+jq \
 && pip3 install awscli --upgrade
 
 #Layer 4 executables
